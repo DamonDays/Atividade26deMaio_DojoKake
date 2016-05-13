@@ -60,18 +60,11 @@ public class Principal {
 		Scanner s = new Scanner(System.in);
 
 		String nome, curso, email, telefone;
-		int semestre;
+		int semestre, inscricao;
 		boolean whatsapp;
-
 		Candidato candidato = new Candidato();
-		candidato.setCodigoInscricao(numeroInscricao);
-		numeroInscricao++;
-
-		System.out.println("Informe o semestre do candidato: ");
-		semestre = s.nextInt();
-		candidato.setSemestreCurso(semestre);
-
-		System.out.println("Informe nome candidato: ");
+		
+		System.out.println("Informe o nome do candidato: ");
 		nome = s.nextLine();
 		candidato.setNomeCandidato(nome);
 
@@ -86,6 +79,14 @@ public class Principal {
 		System.out.println("Informe o telefone do candidato: ");
 		telefone = s.nextLine();
 		candidato.setTelefone(telefone);
+		
+		System.out.println("Informe o código de inscrição do candidato: ")
+		inscricao = s.nextInt();
+		candidato.setCodigoInscricao(inscricao);
+
+		System.out.println("Informe o semestre do candidato: ");
+		semestre = s.nextInt();
+		candidato.setSemestreCurso(semestre);
 
 		System.out.println("Informe se o candidato tem Whatsapp(True para sim e false para não): ");
 		whatsapp = s.nextBoolean();
